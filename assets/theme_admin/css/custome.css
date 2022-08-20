@@ -1,0 +1,112 @@
+.readonly {
+	background:#DDDDDD;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu {
+	width: 150px;
+	padding: 1px 0 0;
+	margin-top: 1px;
+}
+.navbar-nav > .user-menu > .dropdown-menu:after {
+	border-width: 7px;
+	margin-left: -7px;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > li > a {
+	border-bottom: 1px solid #f4f4f4;
+	padding: 3px 15px;
+}
+
+.skin-blue .sidebar > .sidebar-menu > li > a:hover, .skin-blue .sidebar > .sidebar-menu > li.active > a {
+	color: #F6F6F6;
+	background: none repeat scroll 0% 0% #3C8DBC;
+}
+
+.skin-blue .navbar .dropdown-menu > li > a:hover {
+	color: #F6F6F6;
+}
+
+.skin-blue .treeview-menu > li.active, .skin-blue .treeview-menu > li:hover {
+	color: #000000;
+	background: none repeat scroll 0% 0% #D3E6EB;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+.col-md-12 {
+	margin: 0;
+	padding: 0; 
+}
+
+.header .logo {
+	border-bottom: 1px solid transparent;
+}
+.skin-blue .navbar .notifications-menu .dropdown-menu > li > a:hover {
+	color: #367FA9;
+}
+.flexigrid {
+	font-size: 12px;
+}
+.form-box{
+	margin-top: 15px;
+}
+
+.btn {
+	background-image: none;
+	background-repeat: repeat-x;
+	text-shadow: none;
+}
+
+.box .box-header {
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.table_pembuka {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+.table_pembuka > thead > tr > th, .table_pembuka > tbody > tr > th, .table_pembuka > tfoot > tr > th, .table_pembuka > thead > tr > td, .table_pembuka > tbody > tr > td, .table_pembuka > tfoot > tr > td {
+	border-top: 0;
+	line-height: 1.42857;
+	padding: 8px;
+	vertical-align: top;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 1px solid #ddd;
+    line-height: 1.42857;
+    padding: 3px;
+    vertical-align: top;
+}
+
+.form-control {
+	width: 92%;
+}
+
+div.input-group.date, .date div.input-group-addon, .date .form-control[disabled], .date .form-control[readonly], .input-group.date input {
+	cursor: pointer; cursor: hand;
+}
+
+.h_tengah {
+	text-align: center;
+}
+
+.h_kanan {
+	text-align: right;
+}
+
+.h_kiri {
+	text-align: left;
+}
+
+.header_kolom {background-color: #eee; text-align: center; font-weight: bold;}
+
+/*form login*/
+.form-box .header	{
+	background-color: #367FA9;
+}

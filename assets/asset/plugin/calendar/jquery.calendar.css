@@ -1,0 +1,162 @@
+div.calendar
+{
+  font-size: smaller;
+  color: #3e3e3e;
+}
+
+div.calendar.popup
+{
+  margin-left: -40px;
+  margin-top: -100px;
+  z-index: 9999;
+}
+
+div.calendar table.cal_bottom
+{
+  background-color: #ffffff;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-bottom:2px solid #293E6C;
+  border-left:1px solid #777777;
+  border-right:1px solid #777777;
+  border-top:none;
+  width:100%;
+}
+div.calendar table.cal_top
+{
+  background-color: #ffffff;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-top:1px solid #3A589B;
+  border-left:1px solid #3A589B;
+  border-right:1px solid #3A589B;
+  border-bottom:none;
+  width:100%;
+}
+
+
+div.calendar thead {
+  background-color: #fff;
+}
+
+div.calendar td,
+div.calendar th
+{
+  padding: 2px;
+  text-align: center;
+}
+
+div.calendar td.cal_title
+{
+  font-weight: bold;
+  font-size:11px;
+  color: #fff;
+  background-color:#6D84B7;
+}
+div.calendar tr.day_title
+{
+  background-color:#F2F2F2;
+}
+div.calendar tr.day_title th
+{
+  border-bottom:1px solid #BBBBBB !important;
+  color:#555555;
+}
+
+
+div.calendar th
+{
+  font-weight: bold;
+}
+
+div.calendar tr.days td {
+  font-size:11px;
+  color: #666666;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding:2px 4px;
+}
+div.calendar tr.day td {
+  font-size:11px;
+  color: #666666;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+
+div.calendar tr.days td:hover
+{
+  border-style:solid;
+  border-width:1px;
+  border-color: #BEC8DD;
+  background-color: #DFE4EE !important;
+  cursor: pointer;
+  color:#3B5998;
+}
+div.calendar td.cal_button:hover
+{
+  border:none;
+  cursor: pointer;
+}
+div.calendar td.cal_button
+{
+  background-color:#6D84B7;
+}
+div.calendar tr.days td:hover
+{
+ background-color: #ffffff;
+}
+
+div.calendar tr.days td:active
+div.calendar td.cal_button:active
+{
+  background-color: #cde;
+}
+
+div.calendar tr.days td.selected
+{
+  font-weight: bold;
+  background-color: #DDDDDD;
+  border-color: #DDDDDD !important;
+  color: #666666 !important;
+}
+
+div.calendar tr.days td.weekend {
+      
+}
+
+div.calendar tr.days td.today
+{
+  font-weight: bold;
+  border-color: #3d60ba;
+}
+
+div.calendar tr.days td.otherDay
+{
+  background: #FFF;
+  color: #fff;
+}
+
+.arrowside
+{
+  background-image:url('../../images/arrowside.png') ;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+.arrowleft
+{
+  background-position:0px 0px;
+  width:5px;
+  height:10px;
+}
+.arrowright
+{
+  background-position:-5px 0px;
+  width:5px;
+  height:10px;
+}
+
+

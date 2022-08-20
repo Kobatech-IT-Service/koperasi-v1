@@ -1,0 +1,29 @@
+/*
+		$query = $this->db->get();
+			LIMIT ".$start.", ".$limit." 
+
+			SELECT 
+				'A' AS tbl, id, tgl_pinjam AS tgl, jumlah AS kredit, 0 AS debet, kas_id AS dari_kas, NULL AS untuk_kas, keterangan AS ket, user_name As user
+				FROM tbl_pinjaman_h 
+			UNION SELECT 
+				'B' AS tbl, id, tgl_bayar AS tgl, 0 AS kredit, jumlah_bayar AS debet, NULL AS dari_kas, kas_id AS untuk_kas, keterangan AS ket, user_name As user
+				FROM tbl_pinjaman_d 
+			UNION SELECT 
+				'C' AS tbl, id, tgl_transaksi AS tgl, IF(dk = 'K', jumlah, 0) AS kredit, IF(dk = 'D', jumlah, 0) AS debet, 
+				IF(dk = 'K', kas_id, NULL) AS dari_kas, IF(dk = 'D', kas_id, NULL) AS untuk_kas, keterangan AS ket, user_name As user
+				FROM tbl_trans_sp 
+			UNION SELECT 
+				'D' AS tbl, id, tgl_catat AS tgl,
+				IF(dk = 'K', jumlah, IF(dk IS NULL, jumlah, 0)) AS kredit, IF(dk = 'D', jumlah, IF(dk IS NULL, jumlah, 0)) AS debet,
+				dari_kas_id AS dari_kas, untuk_kas_id AS untuk_kas, keterangan AS ket, user_name As user
+				FROM tbl_trans_kas
+			ORDER BY tgl ASC
+
+			1. nama tabel
+			2. tgl transaksi
+			3. kredit
+			4. debet
+			5. dari kas
+			6. untuk kas
+
+		*/

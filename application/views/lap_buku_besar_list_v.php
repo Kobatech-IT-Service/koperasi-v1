@@ -28,7 +28,9 @@
 <?php
 	if(isset($_REQUEST['periode'])) {
 		$tanggal = $_REQUEST['periode'];
-	} 
+	} else {
+		$tanggal = date('Y-m');
+	}
 
 $txt_periode_arr = explode('-', $tanggal);
 	if(is_array($txt_periode_arr)) {

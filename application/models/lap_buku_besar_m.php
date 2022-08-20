@@ -29,7 +29,10 @@ class Lap_buku_besar_m extends CI_Model {
 			$tgl_arr = explode('-', $_REQUEST['periode']);
 			$thn = $tgl_arr[0];
 			$bln = $tgl_arr[1];
-		} 
+		} else {
+			$thn = date('Y');
+			$bln = date('m');
+		}
 		$where = "(YEAR(tgl) = '".$thn."' AND  MONTH(tgl) = '".$bln."') AND (dari_kas = '".$kas_id."' OR  untuk_kas = '".$kas_id."')";
 		$this->db->where($where);
 		$this->db->order_by('tgl', 'ASC');

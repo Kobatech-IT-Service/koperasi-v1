@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'u1592470_user';
-$db['default']['password'] = 'Kobatech2022';
-$db['default']['database'] = 'u1592470_kopkar';
+$db['default']['username'] = 'arjuna';
+$db['default']['password'] = 'arjuna';
+$db['default']['database'] = 'koperasi';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

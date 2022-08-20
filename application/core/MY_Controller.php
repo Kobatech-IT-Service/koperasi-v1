@@ -13,10 +13,10 @@ class MY_Controller extends CI_Controller
 
 		// cek status login user
 		if ($this->session->userdata('login') == FALSE) {
-			redirect('login');
+			redirect('member');
 		} else {
 			if($this->session->userdata('level') == 'member') {
-				redirect('login');
+				redirect('member');
 			}
 			$this->data['u_name'] = $this->session->userdata('u_name');
 			$this->data['level'] = $this->session->userdata('level');

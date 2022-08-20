@@ -8,7 +8,7 @@
       <!-- Sidebar user panel (optional) -->
       <a href="<?php echo site_url();?>" class="logo">
 			<!-- Add the class icon to your logo image or logo icon to add the margining -->
-			 <div style="text-align:center;"><img height="50" src="<?php echo base_url().'assets/theme_admin/img/logo2.png'; ?>"></div>
+			 <div class="py-4 text-bold" style="text-align:center;"><img height="100" src="<?php echo base_url().'assets/theme_admin/img/logo.png'; ?>"></div>
 		</a>
 
       <!-- Sidebar Menu -->

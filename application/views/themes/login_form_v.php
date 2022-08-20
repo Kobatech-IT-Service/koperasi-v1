@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background:url('<?php echo base_url().'assets/theme_admin/img/bgtes.jpg'; ?>');background-size:cover;">
+<html style="background:url('<?php echo base_url().'assets/theme_admin/img/blur-background09.jpg'; ?>');background-size:cover;">
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
@@ -20,7 +20,7 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body style="background:url('<?php echo base_url().'assets/theme_admin/img/bgtes.jpg'; ?>');background-size:cover;" >
+<body style="background:url('<?php echo base_url().'assets/theme_admin/img/blur-background09.jpg'; ?>');background-size:cover;" >
 	<br><br>
 	
 	<p align="center">
@@ -29,12 +29,8 @@
 	</p>
 	<div class="form-box animated flipInY" id="login-box">
 		<div class="header" style = "background-color:#4a9288cf">
-		     <img height='90' src="<?php echo base_url().'assets/theme_admin/img/tulisan.png'; ?>">
-		     <?php if($jenis == 'member') { ?>
-					<h4><a href="<?php echo site_url('login'); ?>" class="btn btn-warning">Ke Halaman Login Admin/Opreator</a></h4>
-				<?php } else { ?>
-					<h4> <a href="<?php echo site_url('member'); ?>" class="btn btn-warning">Ke Halaman Login Anggota</a></h4>
-				<?php } ?></div>
+		     <img height='120' src="<?php echo base_url().'assets/theme_admin/img/logo.png'; ?>">
+		     </div>
 		<form action="" method="post">
 			<div class="body bg-gray">
 			   
@@ -60,7 +56,14 @@
 				<button type="submit" class="btn btn-warning btn-block">Login</button>
 			</div>
 			<div class="footer"> 
-		<div align="center">&copy; Copyright <?php echo date('Y'); ?> |  KOPERASI INSAN BAHARI. </div> 
+		<div align="center">&copy; Copyright <?php echo date('Y'); ?></div> 
+			</div>
+			<div class="text-right">
+			<?php if($jenis == 'member') { ?>
+					<h4><a href="<?php echo site_url('login'); ?>" class="btn">Ke Halaman Login Admin/Opreator</a></h4>
+				<?php } else { ?>
+					<h4> <a href="<?php echo site_url('member'); ?>" class="btn">Ke Halaman Login Anggota</a></h4>
+				<?php } ?>
 			</div>
 		</form>
 	</div>

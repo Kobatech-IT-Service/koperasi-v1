@@ -143,7 +143,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2020 <a href="#">Koperasi Bina Insan Bahari</a>.</strong>
+    <strong>Copyright &copy; <?php echo date('Y'); ?> <a href="https://kobatech.id">KOBATECH.ID</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0.0

@@ -20,7 +20,7 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body style="background:url('<?php echo base_url().'assets/theme_admin/img/blur-background09.jpg'; ?>');background-size:cover;" >
+<body style="background:url('<?php echo base_url().'assets/theme_admin/img/blur-background09nano .jpg'; ?>');background-size:cover;" >
 	<br><br>
 	
 	<p align="center">

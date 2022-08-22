@@ -31,7 +31,6 @@ class Anggota extends OperatorController {
 		$crud->display_as('notelp','Nomor Telepon / HP');
 		$crud->display_as('tgl_daftar','Tanggal Registrasi');
 		$crud->display_as('jabatan_id','Jabatan');
-		$crud->display_as('departement','invisible');
 		$crud->display_as('pass_word','Password');
 		$crud->display_as('file_pic','Photo');
 		$crud->display_as('aktif','Aktif Keanggotaan');

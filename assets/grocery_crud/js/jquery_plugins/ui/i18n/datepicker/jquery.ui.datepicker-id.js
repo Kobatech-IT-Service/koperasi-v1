@@ -47,8 +47,7 @@ jQuery(function ($) {
     isRTL: false,
     showMonthAfterYear: false,
     yearSuffix: "",
-    yearRange: minYear + ":" + year,
-    startYear: currentTime.getFullYear(),
+    yearRange: "1945:" + new Date().getFullYear(),
   };
   $.datepicker.setDefaults($.datepicker.regional["id"]);
 });

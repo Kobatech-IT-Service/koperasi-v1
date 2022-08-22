@@ -21,7 +21,7 @@ class Anggota extends OperatorController {
 		$crud->set_subject('Data Anggota');
 
 		$crud->columns('file_pic','id_anggota','identitas','nama','jk','alamat','kota','jabatan_id','tgl_daftar','aktif');
-		$crud->fields('nama','identitas','jk', 'tmp_lahir','tgl_lahir','status','pekerjaan','agama','alamat','kota','notelp','tgl_daftar', 'jabatan_id','pass_word','aktif','file_pic');
+		$crud->fields('nama','identitas','jk', 'tmp_lahir','tgl_lahir','status','departement','pekerjaan','agama','alamat','kota','notelp','tgl_daftar', 'jabatan_id','pass_word','aktif','file_pic');
 
 		$crud->display_as('id_anggota','ID Anggota');
 		$crud->display_as('identitas','Username');
@@ -86,7 +86,7 @@ class Anggota extends OperatorController {
 		} else {
 			$kerja = array('' => '-');
 		}
-		$crud->field_type('pekerjaan','dropdown',$kerja);
+		$crud->field_type('pekerjaan','invisible',$kerja);
 		
 		$crud->field_type('jabatan_id','dropdown',
 			array('2' => 'Anggota',

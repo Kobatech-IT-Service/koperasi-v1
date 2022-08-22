@@ -48,6 +48,7 @@ jQuery(function ($) {
     showMonthAfterYear: false,
     yearSuffix: "",
     yearRange: minYear + ":" + year,
+    startYear: currentTime.getFullYear(),
   };
   $.datepicker.setDefaults($.datepicker.regional["id"]);
 });

@@ -20,8 +20,8 @@ class Anggota extends OperatorController {
 		$crud->set_table('tbl_anggota');
 		$crud->set_subject('Data Anggota');
 
-		$crud->columns('file_pic','id_anggota','identitas','nama','jk','alamat','kota','jabatan_id','departement','tgl_daftar','aktif');
-		$crud->fields('nama','identitas','jk', 'tmp_lahir','tgl_lahir','status','departement','pekerjaan','agama','alamat','kota','notelp','tgl_daftar', 'jabatan_id','pass_word','aktif','file_pic');
+		$crud->columns('file_pic','id_anggota','identitas','nama','jk','alamat','kota','jabatan_id','tgl_daftar','aktif');
+		$crud->fields('nama','identitas','jk', 'tmp_lahir','tgl_lahir','status','pekerjaan','agama','alamat','kota','notelp','tgl_daftar', 'jabatan_id','pass_word','aktif','file_pic');
 
 		$crud->display_as('id_anggota','ID Anggota');
 		$crud->display_as('identitas','Username');

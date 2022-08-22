@@ -111,6 +111,10 @@ class Anggota extends OperatorController {
 		
 		$output = $crud->render();
 
+		$output.="
+		<script>alert('test');</script>
+		";
+
 		$out['output'] = $this->data['judul_browser'];
 		$this->load->section('judul_browser', 'default_v', $out);
 		$out['output'] = $this->data['judul_utama'];

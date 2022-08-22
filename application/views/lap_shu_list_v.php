@@ -27,9 +27,9 @@
 
 
 <?php 
-if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-	$tgl_dari = $_REQUEST['tgl_dari'];
-	$tgl_samp = $_REQUEST['tgl_samp'];
+if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+	$tgl_dari = $_GET['tgl_dari'];
+	$tgl_samp = $_GET['tgl_samp'];
 } else {
 	$tgl_dari = date('Y') . '-01-01';
 	$tgl_samp = date('Y') . '-12-31';
@@ -289,8 +289,8 @@ $tgl_periode_txt = $tgl_dari_txt . ' - ' . $tgl_samp_txt;
 
 	function cetak () {	
 		<?php 
-		if(isset($_REQUEST['anggota_id'])) {
-			echo 'var anggota_id = "'.$_REQUEST['anggota_id'].'";';
+		if(isset($_GET['anggota_id'])) {
+			echo 'var anggota_id = "'.$_GET['anggota_id'].'";';
 		} else {
 			echo 'var anggota_id = $("input[name=anggota_id]").val();';
 		}

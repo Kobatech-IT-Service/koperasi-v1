@@ -17,9 +17,9 @@ class Lap_pinjaman extends AdminController {
 			exit();
 		}
 
-		$tgl_dari = $_REQUEST['tgl_dari']; 
-		$tgl_sampai = $_REQUEST['tgl_sampai']; 
-		$cari_status = $_REQUEST['cari_status']; 
+		$tgl_dari = $_GET['tgl_dari']; 
+		$tgl_sampai = $_GET['tgl_sampai']; 
+		$cari_status = $_GET['cari_status']; 
 
 		if ($cari_status == "") {
 			$status = "Status Pelunasan : Semua";

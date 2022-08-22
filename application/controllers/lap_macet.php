@@ -85,7 +85,7 @@ class Lap_macet extends OperatorController {
 			//redirect('lap_tempo');
 		}
 
-		$txt_periode_arr = explode('-', $_REQUEST['periode']);
+		$txt_periode_arr = explode('-', $_GET['periode']);
 		if(is_array($txt_periode_arr)) {
 			$periode = jin_nama_bulan($txt_periode_arr[1]) . ' ' . $txt_periode_arr[0];
 		}

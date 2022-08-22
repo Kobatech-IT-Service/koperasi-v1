@@ -28,9 +28,9 @@ class Lap_neraca_m extends CI_Model {
 		$this->db->from('v_transaksi');
 		$this->db->where('untuk_kas', $jenis);
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';
@@ -48,9 +48,9 @@ class Lap_neraca_m extends CI_Model {
 		$this->db->from('v_transaksi');
 		$this->db->where('dari_kas', $jenis);
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';
@@ -95,9 +95,9 @@ class Lap_neraca_m extends CI_Model {
 		$this->db->from('v_transaksi');
 		$this->db->where('transaksi', $akun);
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';

@@ -191,8 +191,8 @@ class Penarikan extends OperatorController {
 			exit();
 		}
 
-		$tgl_dari = $_REQUEST['tgl_dari']; 
-		$tgl_sampai = $_REQUEST['tgl_sampai']; 
+		$tgl_dari = $_GET['tgl_dari']; 
+		$tgl_sampai = $_GET['tgl_sampai']; 
 
 		$this->load->library('Pdf');
 		$pdf = new Pdf('L', 'mm', 'A4', true, 'UTF-8', false);

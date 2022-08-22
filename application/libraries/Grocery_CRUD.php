@@ -5382,8 +5382,8 @@ class UploadHandler
     }
 
     public function get() {
-        $file_name = isset($_REQUEST['file']) ?
-            basename(stripslashes($_REQUEST['file'])) : null;
+        $file_name = isset($_GET['file']) ?
+            basename(stripslashes($_GET['file'])) : null;
         if ($file_name) {
             $info = $this->get_file_object($file_name);
         } else {
@@ -5394,7 +5394,7 @@ class UploadHandler
     }
 
     public function post() {
-        if (isset($_REQUEST['_method']) && $_REQUEST['_method'] === 'DELETE') {
+        if (isset($_GET['_method']) && $_GET['_method'] === 'DELETE') {
             return $this->delete();
         }
         $upload = isset($_FILES[$this->options['param_name']]) ?
@@ -5427,8 +5427,8 @@ class UploadHandler
         }
         header('Vary: Accept');
 
-        $redirect = isset($_REQUEST['redirect']) ?
-            stripslashes($_REQUEST['redirect']) : null;
+        $redirect = isset($_GET['redirect']) ?
+            stripslashes($_GET['redirect']) : null;
         if ($redirect) {
             header('Location: '.sprintf($redirect, rawurlencode($json)));
             return;
@@ -5443,8 +5443,8 @@ class UploadHandler
     }
 
     public function delete() {
-        $file_name = isset($_REQUEST['file']) ?
-            basename(stripslashes($_REQUEST['file'])) : null;
+        $file_name = isset($_GET['file']) ?
+            basename(stripslashes($_GET['file'])) : null;
         $file_path = $this->options['upload_dir'].$file_name;
         $success = is_file($file_path) && $file_name[0] !== '.' && unlink($file_path);
         if ($success) {

@@ -40,9 +40,9 @@ class Transfer_m extends CI_Model {
 	
 	//panggil data simpanan untuk laporan 
 	function lap_data_transfer() {
-		$kode_transaksi = isset($_REQUEST['kode_transaksi']) ? $_REQUEST['kode_transaksi'] : '';
-		$tgl_dari = isset($_REQUEST['tgl_dari']) ? $_REQUEST['tgl_dari'] : '';
-		$tgl_sampai = isset($_REQUEST['tgl_sampai']) ? $_REQUEST['tgl_sampai'] : '';
+		$kode_transaksi = isset($_GET['kode_transaksi']) ? $_GET['kode_transaksi'] : '';
+		$tgl_dari = isset($_GET['tgl_dari']) ? $_GET['tgl_dari'] : '';
+		$tgl_sampai = isset($_GET['tgl_sampai']) ? $_GET['tgl_sampai'] : '';
 		$sql = '';
 		$sql = " SELECT * FROM tbl_trans_kas WHERE akun='Transfer' ";
 		$q = array('kode_transaksi' => $kode_transaksi, 

@@ -32,7 +32,7 @@ class Lap_trans_kas extends OperatorController {
 		//number_format
 		$this->data['js_files'][] = base_url() . 'assets/extra/fungsi/number_format.js';
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
 			//
 		} else {
 			$_GET['tgl_dari'] = date('Y') . '-01-01';
@@ -106,8 +106,8 @@ class Lap_trans_kas extends OperatorController {
 
 		$saldo_sblm = $this->lap_trans_kas_m->get_saldo_sblm();
 
-		$tgl_dari = $_REQUEST['tgl_dari'];
-		$tgl_samp = $_REQUEST['tgl_samp'];
+		$tgl_dari = $_GET['tgl_dari'];
+		$tgl_samp = $_GET['tgl_samp'];
 		$tgl_dari_txt = jin_date_ina($tgl_dari, 'p');
 		$tgl_samp_txt = jin_date_ina($tgl_samp, 'p');
 		$tgl_periode_txt = $tgl_dari_txt . ' - ' . $tgl_samp_txt;

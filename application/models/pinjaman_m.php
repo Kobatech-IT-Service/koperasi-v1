@@ -116,11 +116,11 @@ class Pinjaman_m extends CI_Model {
 	function get_pengajuan_cetak() {
 		$this->load->helper('fungsi');
 		
-		$fr_jenis = isset($_REQUEST['fr_jenis']) ? explode(',', $_REQUEST['fr_jenis']) : array();
-		$fr_status = isset($_REQUEST['fr_status']) ? explode(',', $_REQUEST['fr_status']) : array();
-		$fr_bulan = isset($_REQUEST['fr_bulan']) ? $_REQUEST['fr_bulan'] : '';
-		$tgl_dari = isset($_REQUEST['tgl_dari']) ? $_REQUEST['tgl_dari'] : '';
-		$tgl_sampai = isset($_REQUEST['tgl_sampai']) ? $_REQUEST['tgl_sampai'] : '';
+		$fr_jenis = isset($_GET['fr_jenis']) ? explode(',', $_GET['fr_jenis']) : array();
+		$fr_status = isset($_GET['fr_status']) ? explode(',', $_GET['fr_status']) : array();
+		$fr_bulan = isset($_GET['fr_bulan']) ? $_GET['fr_bulan'] : '';
+		$tgl_dari = isset($_GET['tgl_dari']) ? $_GET['tgl_dari'] : '';
+		$tgl_sampai = isset($_GET['tgl_sampai']) ? $_GET['tgl_sampai'] : '';
 
 		$where = "";
 
@@ -597,10 +597,10 @@ class Pinjaman_m extends CI_Model {
 
 	//panggil data simpanan untuk laporan 
 	function lap_data_pinjaman() {
-		$kode_transaksi = isset($_REQUEST['kode_transaksi']) ? $_REQUEST['kode_transaksi'] : '';
-		$cari_status = isset($_REQUEST['cari_status']) ? $_REQUEST['cari_status'] : '';
-		$tgl_dari = isset($_REQUEST['tgl_dari']) ? $_REQUEST['tgl_dari'] : '';
-		$tgl_sampai = isset($_REQUEST['tgl_sampai']) ? $_REQUEST['tgl_sampai'] : '';
+		$kode_transaksi = isset($_GET['kode_transaksi']) ? $_GET['kode_transaksi'] : '';
+		$cari_status = isset($_GET['cari_status']) ? $_GET['cari_status'] : '';
+		$tgl_dari = isset($_GET['tgl_dari']) ? $_GET['tgl_dari'] : '';
+		$tgl_sampai = isset($_GET['tgl_sampai']) ? $_GET['tgl_sampai'] : '';
 		$sql = '';
 		$sql = " SELECT * FROM v_hitung_pinjaman WHERE dk = 'K' ";
 		$q = array('kode_transaksi' => $kode_transaksi, 

@@ -23,10 +23,10 @@ class Penarikan_m extends CI_Model {
 
 	//panggil data penarikan untuk laporan 
 	function lap_data_penarikan() {
-		$kode_transaksi = isset($_REQUEST['kode_transaksi']) ? $_REQUEST['kode_transaksi'] : '';
-		$cari_simpanan = isset($_REQUEST['cari_simpanan']) ? $_REQUEST['cari_simpanan'] : '';
-		$tgl_dari = isset($_REQUEST['tgl_dari']) ? $_REQUEST['tgl_dari'] : '';
-		$tgl_sampai = isset($_REQUEST['tgl_sampai']) ? $_REQUEST['tgl_sampai'] : '';
+		$kode_transaksi = isset($_GET['kode_transaksi']) ? $_GET['kode_transaksi'] : '';
+		$cari_simpanan = isset($_GET['cari_simpanan']) ? $_GET['cari_simpanan'] : '';
+		$tgl_dari = isset($_GET['tgl_dari']) ? $_GET['tgl_dari'] : '';
+		$tgl_sampai = isset($_GET['tgl_sampai']) ? $_GET['tgl_sampai'] : '';
 		$sql = '';
 		$sql = " SELECT * FROM tbl_trans_sp WHERE dk='K' ";
 		$q = array('kode_transaksi' => $kode_transaksi, 

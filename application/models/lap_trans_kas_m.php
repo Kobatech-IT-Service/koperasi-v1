@@ -7,9 +7,9 @@ class Lap_trans_kas_m extends CI_Model {
 
 	//panggil data simpanan
 	function get_data_simpanan($limit, $start) {		
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';
@@ -38,9 +38,9 @@ class Lap_trans_kas_m extends CI_Model {
 
 
 	function get_jml_data_kas() {
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';
@@ -59,8 +59,8 @@ class Lap_trans_kas_m extends CI_Model {
 
 	function get_saldo_sblm() {
 		// SALDO SEBELUM NYA
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 		}
@@ -88,9 +88,9 @@ class Lap_trans_kas_m extends CI_Model {
 		$this->db->select('debet, kredit');
 		$this->db->from('v_transaksi');
 		
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';
@@ -147,9 +147,9 @@ class Lap_trans_kas_m extends CI_Model {
 	//panggil transaksi kas  untuk laporan
 	function lap_trans_kas() {
         	  
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';

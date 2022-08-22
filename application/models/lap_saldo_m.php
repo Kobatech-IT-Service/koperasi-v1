@@ -34,8 +34,8 @@ class Lap_saldo_m extends CI_Model {
 		$this->db->from('v_transaksi');
 		$this->db->where('untuk_kas', $jenis);
 
-		if(isset($_REQUEST['periode'])) {
-			$tgl_arr = explode('-', $_REQUEST['periode']);
+		if(isset($_GET['periode'])) {
+			$tgl_arr = explode('-', $_GET['periode']);
 			$thn = $tgl_arr[0];
 			$bln = $tgl_arr[1];
 		} else {
@@ -55,8 +55,8 @@ class Lap_saldo_m extends CI_Model {
 		$this->db->from('v_transaksi');
 		$this->db->where('dari_kas', $jenis);
 
-		if(isset($_REQUEST['periode'])) {
-			$tgl_arr = explode('-', $_REQUEST['periode']);
+		if(isset($_GET['periode'])) {
+			$tgl_arr = explode('-', $_GET['periode']);
 			$thn = $tgl_arr[0];
 			$bln = $tgl_arr[1];
 		} else {
@@ -76,8 +76,8 @@ class Lap_saldo_m extends CI_Model {
 		$this->db->select('SUM(debet) AS jum_debet, SUM(kredit) AS jum_kredit');
 		$this->db->from('v_transaksi');
 
-		if(isset($_REQUEST['periode'])) {
-			$tgl_arr = explode('-', $_REQUEST['periode']);
+		if(isset($_GET['periode'])) {
+			$tgl_arr = explode('-', $_GET['periode']);
 			$thn = $tgl_arr[0];
 			$bln = $tgl_arr[1];
 		} else {

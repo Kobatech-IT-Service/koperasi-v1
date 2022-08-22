@@ -47,7 +47,7 @@ class Lap_shu_anggota_m extends CI_Model {
 
 	//panggil data anggota
 	function lap_data_anggota() {
-		$anggota_id = isset($_REQUEST['anggota_id']) ? $_REQUEST['anggota_id'] : '';
+		$anggota_id = isset($_GET['anggota_id']) ? $_GET['anggota_id'] : '';
 		$sql = '';
 		$sql = "SELECT * FROM tbl_anggota WHERE aktif='Y'";
 		$q = array('anggota_id' => $anggota_id);

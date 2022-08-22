@@ -42,9 +42,9 @@ public function __construct() {
 		$data_jns_kas= $this->lap_neraca_m->get_data_jenis_kas();
 		$data_akun = $this->lap_neraca_m->get_data_akun();
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';

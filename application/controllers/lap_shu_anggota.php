@@ -59,20 +59,20 @@ public function __construct() {
 		$anggota = $this->lap_shu_anggota_m->lap_data_anggota();
 		$data_jns_simpanan = $this->lap_shu_anggota_m->get_jenis_simpan();
 
-		if(empty($_REQUEST['js_usaha']) && empty($_REQUEST['js_modal']) && empty($_REQUEST['tot_pendpatan']) && empty($_REQUEST['tot_simpanan']) ) {
+		if(empty($_GET['js_usaha']) && empty($_GET['js_modal']) && empty($_GET['tot_pendpatan']) && empty($_GET['tot_simpanan']) ) {
 			echo 'Data Kosong';
 			//redirect('lap_shu');
 			exit();
 		}
 
-		$js_usaha = $_REQUEST['js_usaha'];
-		$tot_pendpatan = $_REQUEST['tot_pendpatan'];
+		$js_usaha = $_GET['js_usaha'];
+		$tot_pendpatan = $_GET['tot_pendpatan'];
 
-		$js_modal = $_REQUEST['js_modal'];
-		$tot_simpanan = $_REQUEST['tot_simpanan'];
+		$js_modal = $_GET['js_modal'];
+		$tot_simpanan = $_GET['tot_simpanan'];
 
-		$tgl_dari = $_REQUEST['tgl_dari'];
-		$tgl_samp = $_REQUEST['tgl_samp'];
+		$tgl_dari = $_GET['tgl_dari'];
+		$tgl_samp = $_GET['tgl_samp'];
 
 		$tgl_dari_txt = jin_date_ina($tgl_dari, 'p');
 		$tgl_samp_txt = jin_date_ina($tgl_samp, 'p');

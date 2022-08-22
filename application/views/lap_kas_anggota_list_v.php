@@ -231,8 +231,8 @@
 	$(document).ready(function() {
 
 	<?php 
-		if(isset($_REQUEST['anggota_id'])) {
-			echo 'var anggota_id = "'.$_REQUEST['anggota_id'].'";';
+		if(isset($_GET['anggota_id'])) {
+			echo 'var anggota_id = "'.$_GET['anggota_id'].'";';
 		} else {
 			echo 'var anggota_id = "";';
 		}
@@ -267,8 +267,8 @@ function clearSearch(){
 
 function cetak () {
 	<?php 
-		if(isset($_REQUEST['anggota_id'])) {
-			echo 'var anggota_id = "'.$_REQUEST['anggota_id'].'";';
+		if(isset($_GET['anggota_id'])) {
+			echo 'var anggota_id = "'.$_GET['anggota_id'].'";';
 		} else {
 			echo 'var anggota_id = $("#anggota_id").val();';
 		}
@@ -285,8 +285,8 @@ function cetak () {
 
 function cetak2 () {
 	<?php 
-		if(isset($_REQUEST['anggota_id'])) {
-			echo 'var anggota_id = "'.$_REQUEST['anggota_id'].'";';
+		if(isset($_GET['anggota_id'])) {
+			echo 'var anggota_id = "'.$_GET['anggota_id'].'";';
 		} else {
 			echo 'var anggota_id = $("#anggota_id").val();';
 		}

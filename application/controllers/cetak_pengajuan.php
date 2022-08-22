@@ -28,21 +28,21 @@ class Cetak_pengajuan extends OPPController {
 		}
 		$list = $data_ajuan['rows'];
 
-		$fr_jenis = isset($_REQUEST['fr_jenis']) ? explode(',', $_REQUEST['fr_jenis']) : array();
-		$fr_status = isset($_REQUEST['fr_status']) ? explode(',', $_REQUEST['fr_status']) : array();		
+		$fr_jenis = isset($_GET['fr_jenis']) ? explode(',', $_GET['fr_jenis']) : array();
+		$fr_status = isset($_GET['fr_status']) ? explode(',', $_GET['fr_status']) : array();		
 		
 		$fr_jenis = array_diff($fr_jenis, array(NULL)); // NULL / FALSE / ''
 		$fr_status = array_diff($fr_status, array(NULL)); // NULL / FALSE / ''
 
-		$fr_bulan = isset($_REQUEST['fr_bulan']) ? $_REQUEST['fr_bulan'] : '';
+		$fr_bulan = isset($_GET['fr_bulan']) ? $_GET['fr_bulan'] : '';
 		
 		if($fr_bulan != '') {
 			$bln_dari = date("Y-m-d", strtotime($fr_bulan . "-01 -1 month"));
 			$tgl_dari = substr($bln_dari, 0, 7) . '-21';
 			$tgl_sampai = $fr_bulan . '-20';
 		} else {
-			$tgl_dari = $_REQUEST['tgl_dari']; 
-			$tgl_sampai = $_REQUEST['tgl_sampai'];
+			$tgl_dari = $_GET['tgl_dari']; 
+			$tgl_sampai = $_GET['tgl_sampai'];
 		}	
 
 

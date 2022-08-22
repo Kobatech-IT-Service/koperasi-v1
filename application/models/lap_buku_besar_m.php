@@ -25,8 +25,8 @@ class Lap_buku_besar_m extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('v_transaksi');
 		
-		if(isset($_REQUEST['periode'])) {
-			$tgl_arr = explode('-', $_REQUEST['periode']);
+		if(isset($_GET['periode'])) {
+			$tgl_arr = explode('-', $_GET['periode']);
 			$thn = $tgl_arr[0];
 			$bln = $tgl_arr[1];
 		} else {

@@ -27,9 +27,9 @@ class lap_shu_m extends CI_Model {
 		$this->db->from('v_transaksi');
 		$this->db->where('transaksi', $akun);
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';
@@ -49,9 +49,9 @@ class lap_shu_m extends CI_Model {
 		$where_id = "(jenis_id = 40 OR jenis_id = 41)";
 		$this->db->where($where_id);		
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';
@@ -71,9 +71,9 @@ class lap_shu_m extends CI_Model {
 		$where_id = "(jenis_id = 40 OR jenis_id = 41)";
 		$this->db->where($where_id);
 
-		if(isset($_REQUEST['tgl_dari']) && isset($_REQUEST['tgl_samp'])) {
-			$tgl_dari = $_REQUEST['tgl_dari'];
-			$tgl_samp = $_REQUEST['tgl_samp'];
+		if(isset($_GET['tgl_dari']) && isset($_GET['tgl_samp'])) {
+			$tgl_dari = $_GET['tgl_dari'];
+			$tgl_samp = $_GET['tgl_samp'];
 		} else {
 			$tgl_dari = date('Y') . '-01-01';
 			$tgl_samp = date('Y') . '-12-31';

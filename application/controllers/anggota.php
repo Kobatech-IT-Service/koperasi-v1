@@ -31,7 +31,7 @@ class Anggota extends OperatorController {
 		$crud->display_as('notelp','Nomor Telepon / HP');
 		$crud->display_as('tgl_daftar','Tanggal Registrasi');
 		$crud->display_as('jabatan_id','Jabatan');
-		$crud->display_as('departement','Departement');
+		$crud->display_as('departement','invisible');
 		$crud->display_as('pass_word','Password');
 		$crud->display_as('file_pic','Photo');
 		$crud->display_as('aktif','Aktif Keanggotaan');
@@ -49,14 +49,14 @@ class Anggota extends OperatorController {
 			array('L' => 'Laki-laki','P' => 'Perempuan'));
 		$crud->display_as('jk','Jenis Kelamin');
 		
-		$crud->field_type('status','dropdown',
+		$crud->field_type('status','invisible',
 			array('Belum Kawin' => 'Belum Kawin',
 				'Kawin' => 'Kawin',
 				'Cerai Hidup' => 'Cerai Hidup',
 				'Cerai Mati' => 'Cerai Mati',
 				'Lainnya' => 'Lainnya'));
 
-		$crud->field_type('agama','dropdown',
+		$crud->field_type('agama','invisible',
 			array('Islam' => 'Islam',
 				'Katolik' => 'Katolik',
 				'Protestan' => 'Protestan',
@@ -66,7 +66,7 @@ class Anggota extends OperatorController {
 			));
 
 		// DEPARTEMENT
-		$crud->field_type('departement','dropdown',
+		$crud->field_type('departement','invisible',
 			array(
 				'' 						=> '',
 				'TPK' 		            => 'TPK',

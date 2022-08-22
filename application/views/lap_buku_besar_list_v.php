@@ -26,8 +26,8 @@
 </style>
 
 <?php
-	if(isset($_REQUEST['periode'])) {
-		$tanggal = $_REQUEST['periode'];
+	if(isset($_GET['periode'])) {
+		$tanggal = $_GET['periode'];
 	} else {
 		$tanggal = date('Y-m');
 	}

@@ -9,8 +9,8 @@ class Anggota extends OperatorController {
 	public function index() {
 		$this->data['judul_browser'] = 'Data';
 		$this->data['judul_utama'] = 'Data';
-		$this->data['judul_sub'] = 'Anggota <a href="'.site_url('anggota/import').'" class="btn btn-sm btn-success">Import Data</a>';
-		// $this->data['judul_sub'] = 'Anggota';
+		// $this->data['judul_sub'] = 'Anggota <a href="'.site_url('anggota/import').'" class="btn btn-sm btn-success">Import Data</a>';
+		$this->data['judul_sub'] = 'Anggota';
 
 		$this->output->set_template('gc');
 

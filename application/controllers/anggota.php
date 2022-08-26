@@ -164,14 +164,14 @@ class Anggota extends OperatorController {
 						$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
 
 						$nrColumns = ord($highestColumn) - 64;
-						echo "File ".$worksheetTitle." has ";
-						echo $nrColumns . ' columns';
-						echo ' y ' . $highestRow . ' rows.<br />';
+						//echo "File ".$worksheetTitle." has ";
+						//echo $nrColumns . ' columns';
+						//echo ' y ' . $highestRow . ' rows.<br />';
 
 						$data_jml_arr = array();
-						echo 'Data: <table width="100%" cellpadding="3" cellspacing="0"><tr>';
+						//echo 'Data: <table width="100%" cellpadding="3" cellspacing="0"><tr>';
 						for ($row = 1; $row <= $highestRow; ++$row) {
-						   echo '<tr>';
+						   //echo '<tr>';
 							for ($col = 0; $col < $highestColumnIndex; ++$col) {
 								$cell = $worksheet->getCellByColumnAndRow($col, $row);
 								$val = $cell->getValue();
@@ -202,11 +202,11 @@ class Anggota extends OperatorController {
 					$no++;
 				}
 
-				$arr_data = array();
+				//$arr_data = array();
 				$this->data['header'] = $header;
 				$this->data['values'] = $data_list;
 				
-				// print_r($header);exit;
+				//print_r($header);exit;
 				
 				/*
 				$data_import = array(

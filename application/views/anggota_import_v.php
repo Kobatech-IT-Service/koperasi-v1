@@ -51,7 +51,11 @@ if(isset($header)) {
 	echo '<tr>';
 	echo '<th>No</th>';
 	foreach ($header as $row) {
-		echo '<th>'.$row.'</th>';
+		if($row == 'status' || $row == 'agama' || $row == 'pekerjaan' || $row == 'departement'){
+			echo '<th hidden>'.$row.'</th>';
+		}else{
+			echo '<th>'.$row.'</th>';
+		}
 	}
 	echo '</tr>';
 	echo '</thead>';
@@ -61,7 +65,11 @@ if(isset($header)) {
 		echo '<tr>';
 		echo '<td>'.$no.'</td>'; $no++;
 		foreach ($kolom as $key => $row) {
-			echo '<td>'.$row.'</td>';
+			if($row == 'status' || $row == 'agama' || $row == 'pekerjaan' || $row == 'departement'){
+				echo '<td hidden>'.$row.'</td>';
+			}else{
+				echo '<td>'.$row.'</td>';
+			}
 			$hidden_arr['A_'.$no][$key] = $row;
 		}
 		echo '</tr>';

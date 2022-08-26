@@ -65,7 +65,7 @@ if(isset($header)) {
 		echo '<tr>';
 		echo '<td>'.$no.'</td>'; $no++;
 		foreach ($kolom as $key => $row) {
-			if($row == 'status' || $row == 'agama' || $row == 'pekerjaan' || $row == 'departement'){
+			if($row == ""){
 				echo '<td hidden>'.$row.'</td>';
 			}else{
 				echo '<td>'.$row.'</td>';

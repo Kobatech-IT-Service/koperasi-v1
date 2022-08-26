@@ -54,7 +54,7 @@ if(isset($header)) {
 		if($row == 'status' || $row == 'agama' || $row == 'pekerjaan' || $row == 'departement'){
 			echo '<th hidden>'.$row.'</th>';
 		}else{
-			echo '<th style="width: fit-content; padding-left:10px;">'.$row.'</th>';
+			echo '<th style="width: 300px;">'.$row.'</th>';
 		}
 	}
 	echo '</tr>';

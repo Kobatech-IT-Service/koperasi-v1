@@ -129,7 +129,7 @@ class Anggota extends OperatorController {
 	function import() {
 		$this->data['judul_browser'] = 'Import Data';
 		$this->data['judul_utama'] = 'Import Data';
-		$this->data['judul_sub'] = 'Anggota <a href="'.site_url('anggota').'" class="btn btn-sm btn-success">Kembali</a><br><span class="text-md text-danger">Maksimal Data Anggota Dalam Sekali Import = 60 Data Anggota.</span>';
+		$this->data['judul_sub'] = 'Anggota <a href="'.site_url('anggota').'" class="btn btn-sm btn-success">Kembali</a><br><span class="text-md text-danger">Maksimal Data Anggota Dalam Sekali Import = 60 Data Anggota.</span><br><a href="/assets/template_anggota.xlsx" class="text-md text-primary"> >> Download Template Import Anggota</a>';
 
 		$this->load->helper(array('form'));
 

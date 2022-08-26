@@ -206,7 +206,7 @@ class Anggota extends OperatorController {
 				$this->data['header'] = $header;
 				$this->data['values'] = $data_list;
 				
-				print_r($header);exit;
+				// print_r($header);exit;
 				
 				/*
 				$data_import = array(

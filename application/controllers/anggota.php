@@ -163,7 +163,7 @@ class Anggota extends OperatorController {
 						$highestColumn = $worksheet->getHighestColumn(); // e.g 'F'
 						$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
 
-						$nrColumns = ord($highestColumn) - 64;
+						$nrColumns = ord($highestColumn);
 						//echo "File ".$worksheetTitle." has ";
 						//echo $nrColumns . ' columns';
 						//echo ' y ' . $highestRow . ' rows.<br />';
